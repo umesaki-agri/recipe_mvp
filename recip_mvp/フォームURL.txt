@@ -1,5 +1,0 @@
-フォームURL
-https://docs.google.com/forms/d/e/1FAIpQLScZyOh5oYldfP-pPoPHqu-SiugsGwr1mPMcMRbiY_bR_uCLnw/viewform
-
-スプレッドシートURL
-https://docs.google.com/spreadsheets/d/e/2PACX-1vRVLMIkacNKHNeAgrSPUuIPzG0lFzIN26ty8A32RJz3mv3GQby_foQ6Dhj48_v4G8mfsnhgq1bxrM31/pub?output=csv
