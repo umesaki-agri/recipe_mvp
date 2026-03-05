@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>レシピ詳細</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="recipe-detail"></div>
+  <button onclick="window.location.href='index.html'">トップに戻る</button>
+
+  <script src="data.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get('id'));
+    const r = recipes.find(x => x.id === id);
+    const detail = document.getElementById('recipe-detail');
+
+    if (r) {
+      detail.innerHTML = `
+        <h1>${r.recipeName}</h1>
+        <img src="${r.photo}" alt="${r.recipeName}">
+        <h2>材料</h2>
+        <ul>${r.ingredients.map(i => `<li>${i.name}（${i.farmer}）</li>`).join('')}</ul>
+        <h2>作り方</h2>
+        <p>${r.steps}</p>
+        <h2>農家情報</h2>
+        <img src="${r.farmer.photo}" alt="${r.farmer.name}" style="max-width:150px;">
+        <p>${r.farmer.name} (${r.farmer.region}, ${r.farmer.season})</p>
+        <p>${r.farmer.note}</p>
+      `;
+    } else {
+      detail.innerHTML = '<p>レシピが見つかりません</p>';
+    }
+  </script>
+</body>
+</html>
