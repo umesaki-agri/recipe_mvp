@@ -1,5 +1,4 @@
-const sheetURL = "https://script.google.com/macros/s/AKfycbzi4BQeeqrb2zTYLxkW4h3YO9ETdEQYJio7MGQk8j6qjncJ5do2iVbGjx570t-SDst9eQ/exec
-";
+const sheetURL = "https://script.google.com/macros/s/AKfycbzi4BQeeqrb2zTYLxkW4h3YO9ETdEQYJio7MGQk8j6qjncJ5do2iVbGjx570t-SDst9eQ/exec";
 
 fetch(sheetURL)
   .then(response => response.json())
@@ -29,4 +28,5 @@ fetch(sheetURL)
     });
 
   })
+
   .catch(err => console.error("JSON取得エラー:", err));
